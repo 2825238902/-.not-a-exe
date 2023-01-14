@@ -480,9 +480,12 @@
                                                   
                                         while(1==1){
                                             fPuz=prompt('先拧哪一个呢？\n0.离开\n1.第一个\n2.第二个\n3.第三个')
-                                            while(fPuz=1){
-                                                 mid=puz[0]%4
-                                                  if(mid>=0){
+                                            if(fPuz==0){
+                                                break
+                                            }else if(fPuz==1){
+                                            while(fPuz==1){
+                                                mid=puz[0]%4
+                                                if(mid>=0){
                                                     mids=moden[mid]
                                                 }else{
                                                     mids=moden[mid+4]
@@ -496,7 +499,8 @@
                                                     break
                                                 }
                                             }
-                                            while(fPuz=2){
+                                            }else if (fPuz==2) {  
+                                            while(fPuz==2){
                                                 mid=puz[1]%4
                                                 if(mid>=0){
                                                     mids=moden[mid]
@@ -511,7 +515,8 @@
                                                 }else{
                                                     break
                                                 }
-                                            }
+                                                }
+                                            }else{                     
                                             while(fPuz=3){
                                                 mid=puz[2]%4
                                                 if(mid>=0){
@@ -527,10 +532,8 @@
                                                 }else{
                                                     break
                                                 }
+                                            }                          
                                             }
-                                            if(fPuz==0){
-                                                  break
-                                            }          
                                         }
                                         if (puz[0]%4==0 &&puz[1]%4==0 && puz[2]%4==0){
                                             alert('燃气灶里弹出一个暗格')
@@ -540,17 +543,19 @@
                                             alert('？？')
                                             alert('？？\n不给密码给这个干啥？')
                                             alert('算了，去别处看看...')
-                                            var d6=1    
+                                            var d6=1   
                                         }else{
                                             alert('你打算先不管这个煤气灶了')    
                                         }
                                     }else{
                                         alert('已经弹出的暗格里放着一张“龙图”...')
                                         alert('已经弹出的暗格里放着一张“龙图”...\n啊，不是那个含马量极高的龙图啦...')
-                                    }    
+                                    }                                        
                                     default:
-                                        break
+                                        
+                                    
                                 }
+                                break
                             case 4 :
                                 alert('你去了洗手间...')
                                 alert('这地方除了马桶和洗手的水池并没有什么东西。')
@@ -641,7 +646,7 @@
                     alert('【达成成就：结束了，但还会再见】')
                 default:
                     if(errorTimes<=3){
-                        alert('啊，程序出错了！\n您可能输入了错误的存档码...\n请点击开始按钮重新启动owo\n 不支持QQ直接打开')
+                        alert('啊，程序出错了！\n您可能输入了错误的存档码...\n请点击开始按钮重新启动owo\n 请不支持QQ直接打开')
                         errorTimes++
                     }else if ( errorTimes>3 && errorTimes<=5){
                         alert('...')
